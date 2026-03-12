@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GME Electrical Services | Licensed Electricians in Orlando, FL — Residential & Commercial</title>
+  <meta name="description" content="GME Electrical Services provides trusted residential and commercial electrical solutions in Orlando, FL. Licensed, insured, and available 24/7 for emergencies. Call today for a free estimate.">
+  <meta property="og:title" content="GME Electrical Services | Licensed Electricians in Orlando, FL">
+  <meta property="og:description" content="Trusted residential and commercial electrical solutions in Orlando, FL. Licensed, insured, and available 24/7.">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50:'#E3F2FD', 100:'#BBDEFB', 200:'#90CAF9', 300:'#64B5F6', 400:'#42A5F5', 500:'#1E88E5', 600:'#1976D2', 700:'#1565C0', 800:'#0D47A1', 900:'#0A2E6B' },
+            accent: { 50:'#FFF8E1', 100:'#FFECB3', 200:'#FFE082', 300:'#FFD54F', 400:'#FFCA28', 500:'#FFC107', 600:'#FFB300', 700:'#FFA000', 800:'#FF8F00', 900:'#FF6F00' },
+            dark: { 50:'#F8FAFC', 100:'#F1F5F9', 200:'#E2E8F0', 300:'#CBD5E1', 400:'#94A3B8', 500:'#64748B', 600:'#475569', 700:'#334155', 800:'#1E293B', 900:'#0F172A' }
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .highlight { color: #FFC107; }
+    .underline-accent { position: relative; display: inline-block; }
+    .underline-accent::after { content: ''; position: absolute; left: 0; bottom: -4px; width: 100%; height: 4px; background: #FFC107; border-radius: 2px; }
+    .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    .btn-primary { transition: all 0.3s ease; }
+    .btn-primary:hover { background: #FFC107 !important; color: #0F172A !important; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
+    .btn-secondary { transition: all 0.3s ease; }
+    .btn-secondary:hover { background: #FFC107 !important; border-color: #FFC107 !important; color: #0F172A !important; }
+    .service-icon { transition: all 0.3s ease; }
+    .card-hover:hover .service-icon { background: #FFC107; color: #0F172A; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; }
+    .faq-answer.open { max-height: 500px; }
+    .faq-btn.active .faq-chevron { transform: rotate(180deg); }
+    .faq-chevron { transition: transform 0.3s ease; }
+    .floating-cta { animation: pulse-glow 2s infinite; }
+    @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(15,23,42,0.4); } 50% { box-shadow: 0 0 0 12px rgba(15,23,42,0); } }
+    .stat-card { backdrop-filter: blur(10px); }
+    .trust-icon { transition: transform 0.3s ease; }
+    .trust-icon:hover { transform: scale(1.08); }
+    @media(max-width:768px) { .hero-stats { position: relative !important; bottom: auto !important; right: auto !important; margin-top: 1.5rem; } }
+  </style>
+</head>
+<body class="font-sans text-dark-800 bg-white antialiased">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-900/95 backdrop-blur-md border-b border-dark-800 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <a href="#" class="flex items-center gap-2">
+          <div class="w-10 h-10 bg-dark-900 rounded-lg flex items-center justify-center">
+            <i class="fas fa-bolt text-accent-500 text-xl"></i>
+          </div>
+          <div>
+            <span class="font-extrabold text-lg text-white leading-none block">GME</span>
+            <span class="text-[10px] text-dark-400 tracking-widest uppercase leading-none">Electrical Services</span>
+          </div>
+        </a>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#services" class="text-sm font-medium text-dark-300 hover:text-accent-500 transition-colors">Services</a>
+          <a href="#about" class="text-sm font-medium text-dark-300 hover:text-accent-500 transition-colors">About</a>
+          <a href="#reviews" class="text-sm font-medium text-dark-300 hover:text-accent-500 transition-colors">Reviews</a>
+          <a href="#faq" class="text-sm font-medium text-dark-300 hover:text-accent-500 transition-colors">FAQ</a>
+          <a href="#contact" class="text-sm font-medium text-dark-300 hover:text-accent-500 transition-colors">Contact</a>
+        </div>
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="tel:+14075551234" class="text-sm font-semibold text-white hover:text-accent-500 transition-colors">
+            <i class="fas fa-phone mr-1"></i>(407) 555-1234
+          </a>
+          <a href="#contact" class="btn-primary bg-dark-900 text-white px-5 py-2.5 rounded-lg text-sm font-semibold">Get Free Estimate</a>
+        </div>
+        <button id="mobile-menu-btn" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg hover:bg-dark-800 transition-colors">
+          <i class="fas fa-bars text-white text-lg"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-dark-900 border-t border-dark-800 shadow-lg">
+      <div class="px-4 py-4 space-y-2">
+        <a href="#services" class="block px-4 py-2.5 text-sm font-medium text-dark-300 hover:bg-dark-800 rounded-lg">Services</a>
+        <a href="#about" class="block px-4 py-2.5 text-sm font-medium text-dark-300 hover:bg-dark-800 rounded-lg">About</a>
+        <a href="#reviews" class="block px-4 py-2.5 text-sm font-medium text-dark-300 hover:bg-dark-800 rounded-lg">Reviews</a>
+        <a href="#faq" class="block px-4 py-2.5 text-sm font-medium text-dark-300 hover:bg-dark-800 rounded-lg">FAQ</a>
+        <a href="#contact" class="block px-4 py-2.5 text-sm font-medium text-dark-300 hover:bg-dark-800 rounded-lg">Contact</a>
+        <div class="pt-2 border-t border-dark-800">
+          <a href="#contact" class="block w-full text-center bg-dark-900 text-white px-5 py-3 rounded-lg text-sm font-semibold btn-primary">Get Free Estimate</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== SECTION 1: HERO ===== -->
+  <section class="relative pt-24 lg:pt-32 pb-16 lg:pb-24 overflow-hidden bg-gradient-to-br from-dark-50 via-white to-dark-100">
+    <br>
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-dark-100/50 to-transparent hidden lg:block"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Left -->
+         
+        <div class="fade-up">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-dark-900 leading-[1.1] mb-6">
+            Your Home Deserves an Electrician Who <span class="highlight underline-accent">Actually Cares</span>
+          </h1>
+          <p class="text-lg text-dark-500 leading-relaxed mb-8 max-w-xl">
+            We're not the kind of electricians who rush through the job and leave you wondering what just happened. At GME Electrical Services, every wire, every connection, every panel gets our full attention — because your family's safety isn't something we take shortcuts on.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#contact" class="btn-primary bg-dark-900 text-white px-8 py-4 rounded-xl text-base font-bold text-center shadow-lg shadow-dark-900/25">
+              Get Your Free Estimate <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <a href="tel:+14075551234" class="btn-secondary border-2 border-dark-200 text-dark-700 px-8 py-4 rounded-xl text-base font-bold text-center hover:border-accent-500">
+              <i class="fas fa-phone mr-2"></i>Call (407) 555-1234
+            </a>
+          </div>
+        </div>
+        <!-- Right -->
+        <div class="relative fade-up">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=600&fit=crop" alt="Professional electrician working on electrical panel" class="w-full h-[400px] lg:h-[500px] object-cover bg-dark-200">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-900/30 to-transparent"></div>
+          </div>
+          <!-- Floating Stats Card -->
+          <div class="hero-stats absolute -bottom-8 -left-4 lg:-left-8 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-gray-100 p-5 grid grid-cols-2 gap-4 stat-card max-w-xs">
+            <div class="text-center">
+              <span class="block text-2xl font-black text-dark-900">[X]+</span>
+              <span class="text-xs text-dark-500 font-medium">Years Serving Orlando</span>
+            </div>
+            <div class="text-center">
+              <span class="block text-2xl font-black text-dark-900">[X]+</span>
+              <span class="text-xs text-dark-500 font-medium">Projects Completed</span>
+            </div>
+            <div class="text-center">
+              <span class="block text-2xl font-black text-accent-500">4.9 ★</span>
+              <span class="text-xs text-dark-500 font-medium">Google Rating</span>
+            </div>
+            <div class="text-center">
+              <span class="block text-2xl font-black text-dark-900">24/7</span>
+              <span class="text-xs text-dark-500 font-medium">Emergency Service</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST BAR ===== -->
+  <!-- <section class="bg-dark-900 py-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap justify-center gap-6 lg:gap-12">
+        <div class="flex items-center gap-2 text-white trust-icon">
+          <i class="fas fa-shield-halved text-accent-500 text-lg"></i>
+          <span class="text-sm font-semibold whitespace-nowrap">Licensed & Insured</span>
+        </div>
+        <div class="flex items-center gap-2 text-white trust-icon">
+          <i class="fas fa-clock text-accent-500 text-lg"></i>
+          <span class="text-sm font-semibold whitespace-nowrap">Same-Day Service</span>
+        </div>
+        <div class="flex items-center gap-2 text-white trust-icon">
+          <i class="fas fa-tag text-accent-500 text-lg"></i>
+          <span class="text-sm font-semibold whitespace-nowrap">Upfront Pricing</span>
+        </div>
+        <div class="flex items-center gap-2 text-white trust-icon">
+          <i class="fas fa-thumbs-up text-accent-500 text-lg"></i>
+          <span class="text-sm font-semibold whitespace-nowrap">Satisfaction Guaranteed</span>
+        </div>
+        <div class="flex items-center gap-2 text-white trust-icon">
+          <i class="fas fa-star text-accent-500 text-lg"></i>
+          <span class="text-sm font-semibold whitespace-nowrap">5-Star Rated</span>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ===== SECTION 2: SERVICES ===== -->
+  <section id="services" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 fade-up">
+        <span class="text-accent-500 font-bold text-sm uppercase tracking-widest mb-3 block">What We Do</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-dark-900 mb-5">
+          Electrical Services That Keep <span class="highlight">Orlando Running Safely</span>
+        </h2>
+        <p class="text-lg text-dark-500 leading-relaxed">
+          From a flickering kitchen light to a full commercial buildout — if it involves electricity, we handle it. Here's how we help homeowners and businesses across Central Florida.
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Service 1 -->
+        <div class="card-hover bg-white rounded-2xl border border-gray-100 shadow-sm p-6 group fade-up">
+          <div class="service-icon w-14 h-14 bg-dark-100 text-dark-700 rounded-xl flex items-center justify-center mb-5 text-2xl">
+            <i class="fas fa-house-chimney"></i>
+          </div>
+          <h3 class="font-bold text-lg text-dark-900 mb-3">Residential Electrical Repair</h3>
+          <p class="text-dark-500 text-sm leading-relaxed mb-4">Outlets that don't work. Breakers that keep tripping. Whatever's going on, we'll find it, fix it, and make sure it stays fixed.</p>
+          <a href="#contact" class="inline-flex items-center text-dark-900 font-semibold text-sm group-hover:text-accent-600 transition-colors">
+            Schedule a repair <i class="fas fa-arrow-right ml-2 text-xs transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+        <!-- Service 2 -->
+        <div class="card-hover bg-white rounded-2xl border border-gray-100 shadow-sm p-6 group fade-up">
+          <div class="service-icon w-14 h-14 bg-dark-100 text-dark-700 rounded-xl flex items-center justify-center mb-5 text-2xl">
+            <i class="fas fa-building"></i>
+          </div>
+          <h3 class="font-bold text-lg text-dark-900 mb-3">Commercial Electrical Services</h3>
+          <p class="text-dark-500 text-sm leading-relaxed mb-4">Your business can't afford downtime. We work with offices, restaurants, retail spaces, and warehouses — on your schedule.</p>
+          <a href="#contact" class="inline-flex items-center text-dark-900 font-semibold text-sm group-hover:text-accent-600 transition-colors">
+            Get a business quote <i class="fas fa-arrow-right ml-2 text-xs transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+        <!-- Service 3 -->
+        <div class="card-hover bg-white rounded-2xl border border-gray-100 shadow-sm p-6 group fade-up">
+          <div class="service-icon w-14 h-14 bg-dark-100 text-dark-700 rounded-xl flex items-center justify-center mb-5 text-2xl">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3 class="font-bold text-lg text-dark-900 mb-3">Electrical Panel Upgrades</h3>
+          <p class="text-dark-500 text-sm leading-relaxed mb-4">Still running on a 100-amp panel from the '80s? We upgrade panels to 200 or 400 amps so your home can handle everything.</p>
+          <a href="#contact" class="inline-flex items-center text-dark-900 font-semibold text-sm group-hover:text-accent-600 transition-colors">
+            Upgrade your panel <i class="fas fa-arrow-right ml-2 text-xs transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+        <!-- Service 4 -->
+        <div class="card-hover bg-white rounded-2xl border border-gray-100 shadow-sm p-6 group fade-up">
+          <div class="service-icon w-14 h-14 bg-dark-100 text-dark-700 rounded-xl flex items-center justify-center mb-5 text-2xl">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3 class="font-bold text-lg text-dark-900 mb-3">Lighting Design & Installation</h3>
+          <p class="text-dark-500 text-sm leading-relaxed mb-4">Good lighting changes everything — the way a room feels, how productive your team is, even your energy bill.</p>
+          <a href="#contact" class="inline-flex items-center text-dark-900 font-semibold text-sm group-hover:text-accent-600 transition-colors">
+            Light up your space <i class="fas fa-arrow-right ml-2 text-xs transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+        <!-- Service 5 -->
+        <div class="card-hover bg-white rounded-2xl border border-gray-100 shadow-sm p-6 group fade-up">
+          <div class="service-icon w-14 h-14 bg-dark-100 text-dark-700 rounded-xl flex items-center justify-center mb-5 text-2xl">
+            <i class="fas fa-car-battery"></i>
+          </div>
+          <h3 class="font-bold text-lg text-dark-900 mb-3">Generator Installation & Service</h3>
+          <p class="text-dark-500 text-sm leading-relaxed mb-4">Hurricane season is no joke. A whole-home generator means your family never sits in the dark during a storm.</p>
+          <a href="#contact" class="inline-flex items-center text-dark-900 font-semibold text-sm group-hover:text-accent-600 transition-colors">
+            Prepare your home <i class="fas fa-arrow-right ml-2 text-xs transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+        <!-- Service 6 -->
+        <div class="card-hover bg-white rounded-2xl border border-gray-100 shadow-sm p-6 group fade-up">
+          <div class="service-icon w-14 h-14 bg-dark-100 text-dark-700 rounded-xl flex items-center justify-center mb-5 text-2xl">
+            <i class="fas fa-charging-station"></i>
+          </div>
+          <h3 class="font-bold text-lg text-dark-900 mb-3">EV Charger Installation</h3>
+          <p class="text-dark-500 text-sm leading-relaxed mb-4">We install Level 2 home chargers and commercial EV stations — properly permitted and ready to roll.</p>
+          <a href="#contact" class="inline-flex items-center text-dark-900 font-semibold text-sm group-hover:text-accent-600 transition-colors">
+            Install your charger <i class="fas fa-arrow-right ml-2 text-xs transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+        <!-- Service 7 -->
+        <div class="card-hover bg-white rounded-2xl border border-gray-100 shadow-sm p-6 group fade-up">
+          <div class="service-icon w-14 h-14 bg-dark-100 text-dark-700 rounded-xl flex items-center justify-center mb-5 text-2xl">
+            <i class="fas fa-plug-circle-bolt"></i>
+          </div>
+          <h3 class="font-bold text-lg text-dark-900 mb-3">Electrical Wiring & Rewiring</h3>
+          <p class="text-dark-500 text-sm leading-relaxed mb-4">Old knob-and-tube wiring is a fire risk. We rewire homes and businesses with modern, code-compliant wiring.</p>
+          <a href="#contact" class="inline-flex items-center text-dark-900 font-semibold text-sm group-hover:text-accent-600 transition-colors">
+            Rewire safely <i class="fas fa-arrow-right ml-2 text-xs transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+        <!-- Service 8 -->
+        <div class="card-hover bg-white rounded-2xl border border-gray-100 shadow-sm p-6 group fade-up">
+          <div class="service-icon w-14 h-14 bg-dark-100 text-dark-700 rounded-xl flex items-center justify-center mb-5 text-2xl">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <h3 class="font-bold text-lg text-dark-900 mb-3">Surge Protection & Safety</h3>
+          <p class="text-dark-500 text-sm leading-relaxed mb-4">Florida leads the nation in lightning strikes. Whole-home surge protectors, GFCI outlets, and smoke detectors are essential.</p>
+          <a href="#contact" class="inline-flex items-center text-dark-900 font-semibold text-sm group-hover:text-accent-600 transition-colors">
+            Protect your home <i class="fas fa-arrow-right ml-2 text-xs transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3: TESTIMONIALS ===== -->
+  <section id="reviews" class="py-20 lg:py-28 bg-dark-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 fade-up">
+        <span class="text-accent-500 font-bold text-sm uppercase tracking-widest mb-3 block">Testimonials</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-5">
+          Real Reviews from <span class="highlight">Real Orlando Homeowners</span>
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Review 1 -->
+        <div class="card-hover bg-dark-800 rounded-2xl p-8 shadow-sm border border-dark-700 fade-up">
+          <div class="flex gap-1 mb-4">
+            <i class="fas fa-star text-accent-500"></i><i class="fas fa-star text-accent-500"></i><i class="fas fa-star text-accent-500"></i><i class="fas fa-star text-accent-500"></i><i class="fas fa-star text-accent-500"></i>
+          </div>
+          <p class="text-dark-300 leading-relaxed mb-6 italic">"They showed up on time, explained everything clearly, and the price was exactly what they quoted. Finally an electrician I can trust. Already referred them to two neighbors."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-accent-500/10 text-accent-500 rounded-full flex items-center justify-center font-bold text-sm">JD</div>
+            <div>
+              <span class="font-semibold text-white text-sm block">[Customer Name]</span>
+              <span class="text-dark-400 text-xs">[Neighborhood], Orlando</span>
+            </div>
+          </div>
+        </div>
+        <!-- Review 2 -->
+        <div class="card-hover bg-dark-800 rounded-2xl p-8 shadow-sm border border-dark-700 fade-up">
+          <div class="flex gap-1 mb-4">
+            <i class="fas fa-star text-accent-500"></i><i class="fas fa-star text-accent-500"></i><i class="fas fa-star text-accent-500"></i><i class="fas fa-star text-accent-500"></i><i class="fas fa-star text-accent-500"></i>
+          </div>
+          <p class="text-dark-300 leading-relaxed mb-6 italic">"Had a panel upgrade done before hurricane season. The team was professional, clean, and finished ahead of schedule. Best decision we made for our home."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-accent-500/10 text-accent-500 rounded-full flex items-center justify-center font-bold text-sm">MR</div>
+            <div>
+              <span class="font-semibold text-white text-sm block">[Customer Name]</span>
+              <span class="text-dark-400 text-xs">[Neighborhood], Orlando</span>
+            </div>
+          </div>
+        </div>
+        <!-- Review 3 -->
+        <div class="card-hover bg-dark-800 rounded-2xl p-8 shadow-sm border border-dark-700 fade-up">
+          <div class="flex gap-1 mb-4">
+            <i class="fas fa-star text-accent-500"></i><i class="fas fa-star text-accent-500"></i><i class="fas fa-star text-accent-500"></i><i class="fas fa-star text-accent-500"></i><i class="fas fa-star text-accent-500"></i>
+          </div>
+          <p class="text-dark-300 leading-relaxed mb-6 italic">"We use GME for all our restaurant locations. They understand commercial electrical inside and out, and they work around our business hours. Can't recommend them enough."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-accent-500/10 text-accent-500 rounded-full flex items-center justify-center font-bold text-sm">SL</div>
+            <div>
+              <span class="font-semibold text-white text-sm block">[Customer Name]</span>
+              <span class="text-dark-400 text-xs">[Business Type], Orlando</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 4: ABOUT ===== -->
+  <section id="about" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Left: Image -->
+        <div class="relative fade-up">
+          <div class="rounded-2xl overflow-hidden shadow-xl">
+            <img src="https://images.unsplash.com/photo-1555963966-b7ae5404b6ed?w=700&h=500&fit=crop" alt="Electrician working on wiring" loading="lazy" class="w-full h-[400px] lg:h-[480px] object-cover bg-dark-200">
+          </div>
+          <div class="absolute -bottom-5 -right-5 bg-accent-500 text-dark-900 px-6 py-4 rounded-xl shadow-lg hidden lg:block">
+            <span class="font-black text-3xl block">[X]+</span>
+            <span class="text-sm font-semibold">Years of Service</span>
+          </div>
+        </div>
+        <!-- Right: Content -->
+        <div class="fade-up">
+          <span class="text-accent-500 font-bold text-sm uppercase tracking-widest mb-3 block">About GME Electrical</span>
+          <h2 class="text-3xl sm:text-4xl font-black text-dark-900 mb-6">
+            We're Your Neighbors, <span class="highlight">Not a Faceless Corporation</span>
+          </h2>
+          <p class="text-dark-500 leading-relaxed mb-4">
+            GME Electrical Services started because [FOUNDER NAME] got tired of watching Orlando families get overcharged for mediocre work. [He/She/They] built this company on a simple idea: treat every home like it's your own, charge a fair price, and never cut corners.
+          </p>
+          <p class="text-dark-500 leading-relaxed mb-8">
+            That was [X] years ago. Today, we're still a locally-owned team of licensed electricians who live right here in Central Florida. We send our kids to the same schools, eat at the same restaurants, and ride out the same hurricanes. When we do work for you, our reputation is on the line — and that matters to us.
+          </p>
+          <!-- Trust Badges -->
+          <div class="grid grid-cols-2 gap-3">
+            <div class="flex items-center gap-3 bg-dark-50 p-3 rounded-xl">
+              <i class="fas fa-certificate text-accent-500"></i>
+              <span class="text-sm font-semibold text-dark-700">Licensed Master Electricians</span>
+            </div>
+            <div class="flex items-center gap-3 bg-dark-50 p-3 rounded-xl">
+              <i class="fas fa-shield-halved text-accent-500"></i>
+              <span class="text-sm font-semibold text-dark-700">Fully Insured & Bonded</span>
+            </div>
+            <div class="flex items-center gap-3 bg-dark-50 p-3 rounded-xl">
+              <i class="fas fa-user-check text-accent-500"></i>
+              <span class="text-sm font-semibold text-dark-700">Background-Checked Techs</span>
+            </div>
+            <div class="flex items-center gap-3 bg-dark-50 p-3 rounded-xl">
+              <i class="fas fa-hand-holding-dollar text-accent-500"></i>
+              <span class="text-sm font-semibold text-dark-700">Upfront, Honest Pricing</span>
+            </div>
+            <div class="flex items-center gap-3 bg-dark-50 p-3 rounded-xl">
+              <i class="fas fa-broom text-accent-500"></i>
+              <span class="text-sm font-semibold text-dark-700">Clean Job Sites, Every Time</span>
+            </div>
+            <div class="flex items-center gap-3 bg-dark-50 p-3 rounded-xl">
+              <i class="fas fa-scale-balanced text-accent-500"></i>
+              <span class="text-sm font-semibold text-dark-700">FL Building Code Experts</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 5: WHY CHOOSE US ===== -->
+  <section class="py-20 lg:py-28 bg-dark-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 fade-up">
+        <span class="text-accent-500 font-bold text-sm uppercase tracking-widest mb-3 block">Why GME</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-5">
+          Six Reasons People Call Us <span class="highlight">Instead of the Other Guys</span>
+        </h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="card-hover bg-dark-800 border border-dark-700 rounded-2xl p-7 fade-up">
+          <div class="w-12 h-12 bg-accent-500/10 text-accent-500 rounded-xl flex items-center justify-center mb-5 text-xl">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-3">On Time, Every Time</h3>
+          <p class="text-dark-400 text-sm leading-relaxed">We give you a real arrival window — and we stick to it. No more burning a whole afternoon waiting for someone who "might" show up.</p>
+        </div>
+        <div class="card-hover bg-dark-800 border border-dark-700 rounded-2xl p-7 fade-up">
+          <div class="w-12 h-12 bg-accent-500/10 text-accent-500 rounded-xl flex items-center justify-center mb-5 text-xl">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-3">We Explain Everything</h3>
+          <p class="text-dark-400 text-sm leading-relaxed">We'll never talk over your head or use jargon to upsell you. Every issue gets explained in plain English so you can make an informed decision.</p>
+        </div>
+        <div class="card-hover bg-dark-800 border border-dark-700 rounded-2xl p-7 fade-up">
+          <div class="w-12 h-12 bg-accent-500/10 text-accent-500 rounded-xl flex items-center justify-center mb-5 text-xl">
+            <i class="fas fa-file-invoice-dollar"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-3">No Surprise Bills</h3>
+          <p class="text-dark-400 text-sm leading-relaxed">You'll know exactly what the job costs before we start. If something changes, we talk to you first. The price we quote is the price you pay.</p>
+        </div>
+        <div class="card-hover bg-dark-800 border border-dark-700 rounded-2xl p-7 fade-up">
+          <div class="w-12 h-12 bg-accent-500/10 text-accent-500 rounded-xl flex items-center justify-center mb-5 text-xl">
+            <i class="fas fa-medal"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-3">Warranty on All Work</h3>
+          <p class="text-dark-400 text-sm leading-relaxed">Every job comes with a [X]-year workmanship warranty. If something we installed doesn't hold up, we come back and make it right — no charge.</p>
+        </div>
+        <div class="card-hover bg-dark-800 border border-dark-700 rounded-2xl p-7 fade-up">
+          <div class="w-12 h-12 bg-accent-500/10 text-accent-500 rounded-xl flex items-center justify-center mb-5 text-xl">
+            <i class="fas fa-broom"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-3">We Leave It Cleaner</h3>
+          <p class="text-dark-400 text-sm leading-relaxed">Bootie covers, drop cloths, and a full cleanup before we leave. You shouldn't have to clean up after your electrician — and with us, you won't.</p>
+        </div>
+        <div class="card-hover bg-dark-800 border border-dark-700 rounded-2xl p-7 fade-up">
+          <div class="w-12 h-12 bg-accent-500/10 text-accent-500 rounded-xl flex items-center justify-center mb-5 text-xl">
+            <i class="fas fa-sun"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-3">Built for Florida</h3>
+          <p class="text-dark-400 text-sm leading-relaxed">We understand what Florida weather does to electrical systems — the humidity, the lightning, the storms. Our work is engineered for Central Florida conditions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 6: SERVICE AREAS ===== -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 fade-up">
+        <span class="text-accent-500 font-bold text-sm uppercase tracking-widest mb-3 block">Service Areas</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-dark-900 mb-5">
+          Proudly Serving <span class="highlight">Orlando & All of Central Florida</span>
+        </h2>
+        <p class="text-lg text-dark-500 leading-relaxed">
+          Whether you're in a high-rise downtown, a family home in Lake Nona, or running a shop on I-Drive — we're already in your neighborhood.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 max-w-4xl mx-auto fade-up">
+        <div class="bg-dark-800 border border-dark-700 rounded-xl p-4 text-center card-hover">
+          <i class="fas fa-map-pin text-accent-500 mb-2 text-lg"></i>
+          <span class="block font-semibold text-white text-sm">Orlando</span>
+        </div>
+        <div class="bg-dark-50 border border-gray-100 rounded-xl p-4 text-center card-hover">
+          <i class="fas fa-map-pin text-accent-500 mb-2 text-lg"></i>
+          <span class="block font-semibold text-dark-800 text-sm">Winter Park</span>
+        </div>
+        <div class="bg-dark-50 border border-gray-100 rounded-xl p-4 text-center card-hover">
+          <i class="fas fa-map-pin text-accent-500 mb-2 text-lg"></i>
+          <span class="block font-semibold text-dark-800 text-sm">Kissimmee</span>
+        </div>
+        <div class="bg-dark-50 border border-gray-100 rounded-xl p-4 text-center card-hover">
+          <i class="fas fa-map-pin text-accent-500 mb-2 text-lg"></i>
+          <span class="block font-semibold text-dark-800 text-sm">Lake Nona</span>
+        </div>
+        <div class="bg-dark-50 border border-gray-100 rounded-xl p-4 text-center card-hover">
+          <i class="fas fa-map-pin text-accent-500 mb-2 text-lg"></i>
+          <span class="block font-semibold text-dark-800 text-sm">Dr. Phillips</span>
+        </div>
+        <div class="bg-dark-50 border border-gray-100 rounded-xl p-4 text-center card-hover">
+          <i class="fas fa-map-pin text-accent-500 mb-2 text-lg"></i>
+          <span class="block font-semibold text-dark-800 text-sm">Windermere</span>
+        </div>
+        <div class="bg-dark-50 border border-gray-100 rounded-xl p-4 text-center card-hover">
+          <i class="fas fa-map-pin text-accent-500 mb-2 text-lg"></i>
+          <span class="block font-semibold text-dark-800 text-sm">Altamonte Springs</span>
+        </div>
+        <div class="bg-dark-50 border border-gray-100 rounded-xl p-4 text-center card-hover">
+          <i class="fas fa-map-pin text-accent-500 mb-2 text-lg"></i>
+          <span class="block font-semibold text-dark-800 text-sm">Ocoee</span>
+        </div>
+        <div class="bg-dark-50 border border-gray-100 rounded-xl p-4 text-center card-hover">
+          <i class="fas fa-map-pin text-accent-500 mb-2 text-lg"></i>
+          <span class="block font-semibold text-dark-800 text-sm">Sanford</span>
+        </div>
+        <div class="bg-dark-50 border border-gray-100 rounded-xl p-4 text-center card-hover">
+          <i class="fas fa-map-pin text-accent-500 mb-2 text-lg"></i>
+          <span class="block font-semibold text-dark-800 text-sm">Celebration</span>
+        </div>
+        <div class="bg-dark-50 border border-gray-100 rounded-xl p-4 text-center card-hover">
+          <i class="fas fa-map-pin text-accent-500 mb-2 text-lg"></i>
+          <span class="block font-semibold text-dark-800 text-sm">Winter Garden</span>
+        </div>
+        <div class="bg-dark-50 border border-gray-100 rounded-xl p-4 text-center card-hover">
+          <i class="fas fa-map-pin text-accent-500 mb-2 text-lg"></i>
+          <span class="block font-semibold text-dark-800 text-sm">Clermont</span>
+        </div>
+        <div class="bg-dark-50 border border-gray-100 rounded-xl p-4 text-center card-hover">
+          <i class="fas fa-map-pin text-accent-500 mb-2 text-lg"></i>
+          <span class="block font-semibold text-dark-800 text-sm">Apopka</span>
+        </div>
+        <div class="bg-dark-50 border border-gray-100 rounded-xl p-4 text-center card-hover">
+          <i class="fas fa-map-pin text-accent-500 mb-2 text-lg"></i>
+          <span class="block font-semibold text-dark-800 text-sm">Davenport</span>
+        </div>
+        <div class="bg-dark-50 border border-gray-100 rounded-xl p-4 text-center card-hover">
+          <i class="fas fa-map-pin text-accent-500 mb-2 text-lg"></i>
+          <span class="block font-semibold text-dark-800 text-sm">Maitland</span>
+        </div>
+        <div class="bg-dark-50 border border-gray-100 rounded-xl p-4 text-center card-hover">
+          <i class="fas fa-map-pin text-accent-500 mb-2 text-lg"></i>
+          <span class="block font-semibold text-dark-800 text-sm">Casselberry</span>
+        </div>
+      </div>
+      <p class="text-center text-dark-400 mt-8 fade-up">Don't see your area? <a href="tel:+14075551234" class="text-accent-600 font-semibold hover:text-accent-500 transition-colors">Give us a call</a> — we likely cover your neighborhood too.</p>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 7: FAQ ===== -->
+  <section id="faq" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 fade-up">
+        <span class="text-accent-500 font-bold text-sm uppercase tracking-widest mb-3 block">FAQ</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-dark-900 mb-5">
+          Answers <span class="highlight">Before You Even Have to Ask</span>
+        </h2>
+      </div>
+      <div class="space-y-4 fade-up">
+        <!-- FAQ 1 -->
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+            <span class="font-semibold text-dark-900">How quickly can you get to my home for an electrical emergency?</span>
+            <i class="fas fa-chevron-down faq-chevron text-accent-500 text-sm flex-shrink-0"></i>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-dark-500 leading-relaxed pb-5">For true electrical emergencies — sparking outlets, burning smells, total power loss — we dispatch a technician immediately. In most cases, we're at your door within 60 minutes anywhere in the Orlando metro area. Our 24/7 emergency line is always answered by a real person, not a machine.</p>
+          </div>
+        </div>
+        <!-- FAQ 2 -->
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+            <span class="font-semibold text-dark-900">Are you licensed and insured in Florida?</span>
+            <i class="fas fa-chevron-down faq-chevron text-accent-500 text-sm flex-shrink-0"></i>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-dark-500 leading-relaxed pb-5">Absolutely. GME Electrical Services holds a valid Florida Electrical Contractor's License (EC[NUMBER]) and carries full general liability and workers' compensation insurance. We're happy to provide proof of insurance for any job — just ask.</p>
+          </div>
+        </div>
+        <!-- FAQ 3 -->
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+            <span class="font-semibold text-dark-900">Do you offer free estimates?</span>
+            <i class="fas fa-chevron-down faq-chevron text-accent-500 text-sm flex-shrink-0"></i>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-dark-500 leading-relaxed pb-5">Yes. For most residential and commercial projects, we provide a free, no-obligation estimate. We'll come out, assess the work, and give you a clear, written quote — no pressure, no hidden fees. You decide on your own timeline.</p>
+          </div>
+        </div>
+        <!-- FAQ 4 -->
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+            <span class="font-semibold text-dark-900">How much does an electrical panel upgrade cost in Orlando?</span>
+            <i class="fas fa-chevron-down faq-chevron text-accent-500 text-sm flex-shrink-0"></i>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-dark-500 leading-relaxed pb-5">Panel upgrades in Orlando typically range from $[LOW] to $[HIGH] depending on your home's size, existing wiring, and whether you're going from 100 to 200 amps or higher. We provide an exact quote after inspecting your current setup — never a vague range.</p>
+          </div>
+        </div>
+        <!-- FAQ 5 -->
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+            <span class="font-semibold text-dark-900">Can you install an EV charger at my home?</span>
+            <i class="fas fa-chevron-down faq-chevron text-accent-500 text-sm flex-shrink-0"></i>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-dark-500 leading-relaxed pb-5">Yes — we install Level 2 EV chargers for Tesla, Ford, Rivian, and all other makes. This includes running a dedicated 240V circuit, proper permitting with Orange County, and a final inspection. Most home installations are completed in a single day.</p>
+          </div>
+        </div>
+        <!-- FAQ 6 -->
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+            <span class="font-semibold text-dark-900">Do you pull permits for electrical work?</span>
+            <i class="fas fa-chevron-down faq-chevron text-accent-500 text-sm flex-shrink-0"></i>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-dark-500 leading-relaxed pb-5">Always. Every job that requires a permit gets one — no exceptions. Unpermitted electrical work is unsafe and can cause serious problems when you sell your home. We handle all permit applications, inspections, and code compliance so you don't have to think about it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 8: FINAL CTA ===== -->
+  <section class="py-20 lg:py-28 bg-dark-900 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-72 h-72 bg-accent-500 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative fade-up">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6">
+        Ready to Get It <span class="text-accent-500">Done Right?</span>
+      </h2>
+      <p class="text-xl text-white/80 leading-relaxed mb-10 max-w-2xl mx-auto">
+        Tell us what's going on and we'll get back to you within 24 hours. Or skip the form and give us a call — we pick up.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contact" class="bg-accent-500 text-dark-900 px-10 py-4 rounded-xl text-lg font-bold hover:bg-white hover:text-dark-900 transition-all shadow-lg">
+          Get Your Free Estimate <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+        <a href="tel:+14075551234" class="border-2 border-white text-white px-10 py-4 rounded-xl text-lg font-bold hover:bg-white hover:text-dark-900 transition-all">
+          <i class="fas fa-phone mr-2"></i>Call (407) 555-1234
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 9: CONTACT ===== -->
+  <section id="contact" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+        <!-- Left: Contact Info -->
+        <div class="fade-up">
+          <span class="text-accent-500 font-bold text-sm uppercase tracking-widest mb-3 block">Contact Us</span>
+          <h2 class="text-3xl sm:text-4xl font-black text-dark-900 mb-6">
+            Let's Talk About <span class="highlight">Your Project</span>
+          </h2>
+          <p class="text-dark-500 leading-relaxed mb-8">
+            Whether it's a quick fix or a major installation, we'd love to hear from you. No job is too small, and no question is too basic — we've heard it all, and we're happy to help.
+          </p>
+          <div class="space-y-5 mb-10">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-dark-100 text-dark-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-phone text-lg"></i>
+              </div>
+              <div>
+                <span class="text-xs text-dark-400 uppercase tracking-wider font-medium">Phone</span>
+                <a href="tel:+14075551234" class="block font-bold text-dark-900 hover:text-accent-500 transition-colors">(407) 555-1234</a>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-dark-100 text-dark-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-envelope text-lg"></i>
+              </div>
+              <div>
+                <span class="text-xs text-dark-400 uppercase tracking-wider font-medium">Email</span>
+                <a href="mailto:info@gmeelectrical.com" class="block font-bold text-dark-900 hover:text-accent-500 transition-colors">[EMAIL ADDRESS]</a>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-dark-100 text-dark-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-location-dot text-lg"></i>
+              </div>
+              <div>
+                <span class="text-xs text-dark-400 uppercase tracking-wider font-medium">Office</span>
+                <span class="block font-bold text-dark-900">[STREET ADDRESS], Orlando, FL [ZIP]</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-dark-100 text-dark-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-clock text-lg"></i>
+              </div>
+              <div>
+                <span class="text-xs text-dark-400 uppercase tracking-wider font-medium">Hours</span>
+                <span class="block font-bold text-dark-900">Mon–Sat 7:00 AM – 7:00 PM</span>
+                <span class="text-xs text-accent-600 font-semibold">Emergency: 24/7</span>
+              </div>
+            </div>
+          </div>
+          <!-- Trust Badges near form -->
+          <div class="flex flex-wrap gap-3">
+            <span class="inline-flex items-center gap-2 bg-dark-50 px-4 py-2 rounded-full text-xs font-semibold text-dark-600">
+              <i class="fas fa-shield-halved text-accent-500"></i> Licensed & Insured
+            </span>
+            <span class="inline-flex items-center gap-2 bg-dark-50 px-4 py-2 rounded-full text-xs font-semibold text-dark-600">
+              <i class="fas fa-lock text-accent-500"></i> Your Info Stays Private
+            </span>
+            <span class="inline-flex items-center gap-2 bg-dark-50 px-4 py-2 rounded-full text-xs font-semibold text-dark-600">
+              <i class="fas fa-star text-accent-500"></i> 4.9 Google Rating
+            </span>
+          </div>
+        </div>
+        <!-- Right: Form -->
+        <div class="fade-up">
+          <div class="bg-dark-50 rounded-2xl p-8 lg:p-10 border border-gray-100">
+            <h3 class="font-bold text-xl text-dark-900 mb-2">Request Your Free Estimate</h3>
+            <p class="text-dark-400 text-sm mb-6">We typically respond within [X] hours.</p>
+            <form action="[FORM_ENDPOINT]" method="POST" class="space-y-4">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="firstName" class="block text-sm font-semibold text-dark-700 mb-1.5">First Name *</label>
+                  <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-dark-900 placeholder-dark-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition-all" placeholder="John">
+                </div>
+                <div>
+                  <label for="lastName" class="block text-sm font-semibold text-dark-700 mb-1.5">Last Name *</label>
+                  <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-dark-900 placeholder-dark-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition-all" placeholder="Doe">
+                </div>
+              </div>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="phone" class="block text-sm font-semibold text-dark-700 mb-1.5">Phone *</label>
+                  <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-dark-900 placeholder-dark-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition-all" placeholder="(407) 000-0000">
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-semibold text-dark-700 mb-1.5">Email</label>
+                  <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-dark-900 placeholder-dark-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition-all" placeholder="john@example.com">
+                </div>
+              </div>
+              <div>
+                <label for="service" class="block text-sm font-semibold text-dark-700 mb-1.5">Service Needed</label>
+                <select id="service" name="service" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-dark-900 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition-all">
+                  <option value="">Select a service...</option>
+                  <option value="residential-repair">Residential Electrical Repair</option>
+                  <option value="commercial">Commercial Electrical Services</option>
+                  <option value="panel-upgrade">Electrical Panel Upgrades</option>
+                  <option value="lighting">Lighting Design & Installation</option>
+                  <option value="generator">Generator Installation & Service</option>
+                  <option value="ev-charger">EV Charger Installation</option>
+                  <option value="wiring">Electrical Wiring & Rewiring</option>
+                  <option value="surge-protection">Surge Protection & Safety</option>
+                  <option value="other">Other / Not Sure</option>
+                </select>
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-semibold text-dark-700 mb-1.5">Tell Us What's Going On</label>
+                <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-dark-900 placeholder-dark-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition-all resize-none" placeholder="Describe your project or issue..."></textarea>
+              </div>
+              <button type="submit" class="btn-primary w-full bg-dark-900 text-white px-8 py-4 rounded-xl text-base font-bold shadow-lg shadow-dark-900/25">
+                Send My Request <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+              <p class="text-xs text-dark-400 text-center">Your info stays private — we never spam or sell your data.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 10: FOOTER ===== -->
+  <footer class="bg-dark-900 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <!-- Brand -->
+        <div>
+          <a href="#" class="flex items-center gap-2 mb-4">
+            <div class="w-10 h-10 bg-dark-800 rounded-lg flex items-center justify-center">
+              <i class="fas fa-bolt text-accent-500 text-xl"></i>
+            </div>
+            <div>
+              <span class="font-extrabold text-lg leading-none block">GME</span>
+              <span class="text-[10px] text-dark-400 tracking-widest uppercase leading-none">Electrical Services</span>
+            </div>
+          </a>
+          <p class="text-dark-400 text-sm leading-relaxed mb-5">
+            Orlando's trusted electrical contractor for residential and commercial services. Licensed, insured, and committed to doing the job right the first time.
+          </p>
+          <div class="flex gap-3">
+            <a href="[FACEBOOK_URL]" class="w-9 h-9 bg-dark-800 hover:bg-dark-1000 rounded-lg flex items-center justify-center transition-colors" aria-label="Facebook"><i class="fab fa-facebook-f text-sm"></i></a>
+            <a href="[INSTAGRAM_URL]" class="w-9 h-9 bg-dark-800 hover:bg-dark-1000 rounded-lg flex items-center justify-center transition-colors" aria-label="Instagram"><i class="fab fa-instagram text-sm"></i></a>
+            <a href="[GOOGLE_BUSINESS_URL]" class="w-9 h-9 bg-dark-800 hover:bg-dark-1000 rounded-lg flex items-center justify-center transition-colors" aria-label="Google"><i class="fab fa-google text-sm"></i></a>
+            <a href="[YELP_URL]" class="w-9 h-9 bg-dark-800 hover:bg-dark-1000 rounded-lg flex items-center justify-center transition-colors" aria-label="Yelp"><i class="fab fa-yelp text-sm"></i></a>
+          </div>
+        </div>
+        <!-- Services -->
+        <div>
+          <h4 class="font-bold text-sm uppercase tracking-wider text-accent-500 mb-5">Services</h4>
+          <ul class="space-y-2.5">
+            <li><a href="#services" class="text-dark-400 hover:text-white text-sm transition-colors">Residential Repair</a></li>
+            <li><a href="#services" class="text-dark-400 hover:text-white text-sm transition-colors">Commercial Electrical</a></li>
+            <li><a href="#services" class="text-dark-400 hover:text-white text-sm transition-colors">Panel Upgrades</a></li>
+            <li><a href="#services" class="text-dark-400 hover:text-white text-sm transition-colors">Lighting Installation</a></li>
+            <li><a href="#services" class="text-dark-400 hover:text-white text-sm transition-colors">Generator Service</a></li>
+            <li><a href="#services" class="text-dark-400 hover:text-white text-sm transition-colors">EV Chargers</a></li>
+          </ul>
+        </div>
+        <!-- Company -->
+        <div>
+          <h4 class="font-bold text-sm uppercase tracking-wider text-accent-500 mb-5">Company</h4>
+          <ul class="space-y-2.5">
+            <li><a href="#about" class="text-dark-400 hover:text-white text-sm transition-colors">About Us</a></li>
+            <li><a href="#services" class="text-dark-400 hover:text-white text-sm transition-colors">Service Areas</a></li>
+            <li><a href="#reviews" class="text-dark-400 hover:text-white text-sm transition-colors">Reviews</a></li>
+            <li><a href="#faq" class="text-dark-400 hover:text-white text-sm transition-colors">FAQ</a></li>
+            <li><a href="#contact" class="text-dark-400 hover:text-white text-sm transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Legal -->
+        <div>
+          <h4 class="font-bold text-sm uppercase tracking-wider text-accent-500 mb-5">Legal</h4>
+          <ul class="space-y-2.5">
+            <li><a href="[PRIVACY_URL]" class="text-dark-400 hover:text-white text-sm transition-colors">Privacy Policy</a></li>
+            <li><a href="[TERMS_URL]" class="text-dark-400 hover:text-white text-sm transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="text-dark-400 hover:text-white text-sm transition-colors">Sitemap</a></li>
+            <li><a href="#" class="text-dark-400 hover:text-white text-sm transition-colors">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-dark-800 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-dark-500 text-sm">
+          <p>&copy; 2026 GME Electrical Services. All rights reserved.</p>
+          <p>Serving Orlando, Winter Park, Kissimmee, Lake Nona & Central Florida</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING ELEMENTS ===== -->
+
+  <!-- Sticky Mobile Call Button -->
+  <div class="fixed bottom-0 left-0 right-0 bg-dark-900 p-3 flex items-center justify-center gap-3 z-40 lg:hidden shadow-[0_-4px_20px_rgba(0,0,0,0.15)]">
+    <a href="tel:+14075551234" class="flex-1 bg-white text-dark-900 py-3 rounded-xl text-center font-bold text-sm">
+      <i class="fas fa-phone mr-2"></i>Call Now
+    </a>
+    <a href="#contact" class="flex-1 bg-accent-500 text-dark-900 py-3 rounded-xl text-center font-bold text-sm">
+      <i class="fas fa-file-lines mr-2"></i>Free Estimate
+    </a>
+  </div>
+
+  <!-- Floating Desktop CTA -->
+  <a href="#contact" class="floating-cta fixed bottom-8 right-8 bg-dark-900 text-white w-14 h-14 rounded-full items-center justify-center shadow-xl z-40 hidden lg:flex hover:bg-accent-500 hover:text-dark-900 transition-all" aria-label="Get Free Estimate">
+    <i class="fas fa-file-lines text-xl"></i>
+  </a>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+      const icon = this.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-xmark');
+    });
+
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.add('hidden');
+        const icon = document.getElementById('mobile-menu-btn').querySelector('i');
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-xmark');
+      });
+    });
+
+    // FAQ accordion
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const isOpen = answer.classList.contains('open');
+
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.faq-btn').forEach(b => b.classList.remove('active'));
+
+      if (!isOpen) {
+        answer.classList.add('open');
+        btn.classList.add('active');
+      }
+    }
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Navbar shadow on scroll
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 20) {
+        nav.classList.add('shadow-md');
+      } else {
+        nav.classList.remove('shadow-md');
+      }
+    });
+  </script>
+
+</body>
+</html>
